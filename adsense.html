@@ -12,9 +12,12 @@
         <!-- Tasks will be displayed here -->
     </div>
 
+    <button id="fetch-button">Fetch Tasks</button>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            fetchTasks();
+            const fetchButton = document.getElementById("fetch-button");
+            fetchButton.addEventListener("click", fetchTasks);
         });
 
         function fetchTasks() {
